@@ -2,14 +2,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.use(express.static('/Users/aaronskonieczny/Documents/Spring2024/SoftwareEngineering/node-js-on-azure-azs'));
+// Serve static files from the same directory as server.js
+app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Users/aaronskonieczny/Documents/Spring2024/SoftwareEngineering/node-js-on-azure-azs');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/roll', (req, res) => {
-    const diceResult = Math.floor(Math.random() * 6) + 1; // Server-side random number generation
+    const diceResult = Math.floor(Math.random() * 6) + 1;
     res.json({ diceResult });
 });
 

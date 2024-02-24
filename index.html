@@ -1,5 +1,24 @@
-<!-- Add this script tag to the head of your HTML -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Roller</h1>
 
-<!-- Update the script.js file to use AJAX for dice rolls -->
-<script src="script.js"></script>
+        <div class="dice-container">
+            <label for="diceResult">Dice Result:</label>
+            <input type="text" id="diceResult" readonly>
+        </div>
+
+        <button onclick="rollDice()">Roll Dice</button>
+
+        <div class="footer">
+            <p>&copy; 2024 Aaron Skonieczny</p>
+        </div>
+    </div>
+</body>
+</html>
